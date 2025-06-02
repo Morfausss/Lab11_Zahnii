@@ -5,29 +5,29 @@ using namespace std;
 int main() {
     const int MAX_LENGTH = 100;
     
-    char *p1, *p2, *p3;
+    char *a, *b, *c;
     
-    p1 = new char[MAX_LENGTH];
-    p2 = new char[MAX_LENGTH];
-    p3 = new char[MAX_LENGTH];
+    a = new char[MAX_LENGTH];
+    b = new char[MAX_LENGTH];
+    c = new char[MAX_LENGTH];
     
-    cout << "Enter string for p1: ";
-    cin.getline(p1, MAX_LENGTH);
+    cout << "Enter string for a: ";
+    cin.getline(a, MAX_LENGTH);
 
-    cout << "Enter string for p2: ";
-    cin.getline(p2, MAX_LENGTH);
+    cout << "Enter string for b: ";
+    cin.getline(b, MAX_LENGTH);
 
-    cout << "Enter string for p3: ";
-    cin.getline(p3, MAX_LENGTH);
+    cout << "Enter string for c: ";
+    cin.getline(c, MAX_LENGTH);
     
     cout << "\nYou entered:\n";
-    cout << "p1: " << p1 << endl;
-    cout << "p2: " << p2 << endl;
-    cout << "p3: " << p3 << endl;
+    cout << "a: " << a << endl;
+    cout << "b: " << b << endl;
+    cout << "c: " << c << endl;
     
-    delete[] p1;
-    delete[] p2;
-    delete[] p3;
+    delete[] a;
+    delete[] b;
+    delete[] c;
 
     return 0;
 }
