@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double a, b;
+    double *pa, *pb;
+
+    cout << "Enter value for a: ";
+    cin >> a;
+    cout << "Enter value for b: ";
+    cin >> b;
+
+    pa = &a;
+    pb = &b;
+
+    *pa = *pa * 3;
+
+    double temp = *pa;
+    *pa = *pb;
+    *pb = temp;
+
+    cout << "After operations:" << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+    return 0;
+}
