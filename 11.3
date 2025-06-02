@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    cout << "Enter the number of elements: ";
+    cin >> n;
+
+    int* a = new int[n];
+    int* b = new int[n];
+
+    cout << "Enter elements for array p:\n";
+    for (int i = 0; i < n; i++) {
+        cout << "p[" << i << "] = ";
+        cin >> a[i];
+    }
+
+    cout << "Enter elements for array q:\n";
+    for (int i = 0; i < n; i++) {
+        cout << "q[" << i << "] = ";
+        cin >> b[i];
+    }
+
+    int negativeP = 0, negativeQ = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] < 0) negativeP++;
+        if (b[i] < 0) negativeQ++;
+    }
+
+    cout << "\nNumber of negative elements:\n";
+    cout << "Array p: " << negativeP << endl;
+    cout << "Array q: " << negativeQ << endl;
+
+    if (negativeP > negativeQ) {
+        cout << "Array p has more negative elements.\n";
+    } else if (negativeQ > negativeP) {
+        cout << "Array q has more negative elements.\n";
+    } else {
+        cout << "Both arrays have the same number of negative elements.\n";
+    }
+
+    delete[] a;
+    delete[] b;
+
+    return 0;
+}
